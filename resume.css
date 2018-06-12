@@ -1,0 +1,632 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Quicksand:300,400,500,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@font-face {
+    font-family: "Slim Joe";
+    src: local("Slim Joe"), url("Slim Joe.otf");
+}
+
+@font-face {
+    font-family: "ZonaPro ExtraLight";
+    src: local("ZonaPro-ExtraLight"), url("ZonaPro-ExtraLight.otf");
+}
+
+body {
+    background: black;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    height: 100%;
+}
+
+.resumeWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.clip {
+    color: #C4B19E;
+}
+
+.resumeHead {
+    grid-area: bnr;
+    text-align: center;
+    font-family: "Slim Joe";
+    font-size: 2.8em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(196, 177, 158, 0.432), #C4B19E, rgba(196, 177, 158, 0.432));
+    margin-bottom: 10px;
+}
+
+/* --------------- GLOBAL --------------- */
+
+.resumeSectionHead,
+.educationHead,
+.skillsHead {
+    text-align: center;
+    font-family: "Slim Joe";
+    padding-left: 0px;
+    padding-right: 0px;
+    font-weight: 900;
+    font-size: 1.8em;
+}
+
+.resumeSectionHead {
+    color: #C4B19E;
+}
+
+.educationHead,
+.skillsHead {
+    color: black;
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color: black;
+}
+
+.summary,
+.work,
+.education,
+.volunteer,
+.skills,
+.contact,
+.projects {
+    padding: 20px;
+}
+
+.listHead,
+.projectListHead {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-weight: 450;
+    font-size: 1.05em;
+    font-family: "ZonaPro ExtraLight";
+    -webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-color: #C4B19E;
+    color: #C4B19E;
+}
+
+.educationListHead,
+.skillsListHead {
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+    color: black;
+}
+
+.educationListContent,
+.skillsListContent {
+    font-weight: 400;
+}
+
+li {
+    padding-bottom: 10px;
+    margin-left: -12px;
+    font-weight: 200;
+    font-size: 1.05em;
+}
+
+b {
+    font-weight: 550;
+}
+
+/* --------------- SUMMARY --------------- */
+
+.summary {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.summaryContent {
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+/* --------------- WORK --------------- */
+
+.work {
+    border: 3px solid #C4B19E;
+    padding: 10px;
+}
+
+/* --------------- EDUCATION --------------- */
+
+.education {
+    background: #C4B19E;
+    color: black;
+    margin-top: 10px;
+}
+
+.educationHead {
+    color: black;
+}
+
+.educationListHead {
+    font-weight: 600;
+}
+
+/* --------------- VOLUNTEER --------------- */
+
+.volunteerList {
+    padding-top: 5px;
+}
+
+/* --------------- CONTACT --------------- */
+
+.contact {
+    padding: 20px;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.2em;
+    font-size: 1.38em;
+}
+
+.resContactImg {
+    height: auto;
+    width: 36px;
+    padding-bottom: 3px;
+}
+
+.email {
+    padding-top: 15px;
+}
+
+.emailLink {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.emailLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* --------------- SKILLS --------------- */
+
+.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #C4B19E;
+    color: black;
+}
+
+.skills {
+    display: grid;
+    grid-template-areas: "leftSkill rightSkill";
+    padding-top: 10px;
+}
+
+.skillsHead {
+    margin-top: 20px;
+    background: #C4B19E;
+}
+
+.leftSkills {
+    grid-area: leftSkill;
+}
+
+.rightSkills {
+    grid-area: rightSkill;
+    margin-left: 30px;
+}
+
+/* --------------- PROJECTS --------------- */
+
+.projects {
+    border: 3px solid #C4B19E;
+}
+
+.projectsSub {
+    text-align: center;
+    font-weight: 400;
+    padding-top: 10px;
+    font-size: 1.1em;
+}
+
+.portfolioLink {
+    color: #C4B19E;
+    text-decoration: none;
+    font-size: 1.38em;
+}
+
+.portfolioLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.projectListHead {
+    font-family: "ZonaPro ExtraLight";
+    -webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-color: #C4B19E;
+    color: #C4B19E;
+    font-size: 1.5em;
+}
+
+/* --------------------------------------------- */
+
+/* --------------------------------------------- */
+
+/* --------------- MEDIA QUERIES --------------- */
+
+/* --------------------------------------------- */
+
+/* --------------------------------------------- */
+
+@media only screen and (min-width: 550px) {
+    .resumeWrapper {
+        padding: 30px;
+    }
+    .resumeHead {
+        font-size: 3.5em;
+    }
+    .resumeSectionHead,
+    .educationHead,
+    .skillsHead {
+        font-size: 2.2em;
+    }
+    li {
+        font-weight: 400;
+    }
+    .workContent {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .education {
+        margin-top: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .rightSkills {
+        grid-area: rightSkill;
+        margin-left: 110px;
+    }
+    .resumeSectionHead {
+        -webkit-text-stroke-width: .01px;
+        -webkit-text-stroke-color: rgba(196, 177, 158, 0);
+    }
+    .educationHead,
+    .skillsHead {
+        -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: black;
+    }
+    .summary,
+    .work,
+    .education,
+    .volunteer,
+    .skills,
+    .contact,
+    .projects {
+        padding: 20px;
+    }
+    .listHead {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-weight: 400;
+        font-size: 1.15em;
+    }
+    .educationListContent,
+    .skillsListContent {
+        font-weight: 400;
+        font-size: 1.15em;
+    }
+    li {
+        padding-bottom: 10px;
+        margin-left: -12px;
+        font-weight: 200;
+        font-size: 1.2em;
+    }
+    .summaryContent {
+        font-weight: 100;
+        font-size: 1.35em;
+    }
+    .educationListHead {
+        font-weight: 600;
+    }
+    .skillsListContent {
+        font-size: 1.35em;
+    }
+    .contact {
+        padding: 30px;
+        font-weight: 200;
+        font-size: 1.8em;
+    }
+    .resContactImg {
+        height: auto;
+        width: 45px;
+        padding-bottom: 3px;
+    }
+    .email {
+        padding-top: 15px;
+    }
+    .emailLink:hover {
+        font-weight: 600;
+    }
+    .projectsSub {
+        font-size: 1.35em;
+    }
+    .projectListHead {
+        font-size: 1.55em;
+    }
+    .portfolioLink {
+        font-size: 1.6em;
+    }
+    .portfolioLink:hover {
+        font-weight: 700;
+    }
+}
+
+/*  */
+
+@media only screen and (min-width: 650px) {
+    .resumeWrapper {
+        padding: 10px;
+    }
+    .resumeHead {
+        font-size: 4em;
+    }
+    .summary {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .education {
+        margin-top: 40px;
+    }
+    .volunteer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .rightSkills {
+        margin-left: 140px;
+    }
+    .contact {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        font-size: 2em;
+    }
+    .email {
+        padding-top: 30px;
+    }
+}
+
+/* --------------- GRID VIEW --------------- */
+
+@media only screen and (min-width: 800px) {
+    .resumeContainer {
+        display: grid;
+        grid-template-areas: "left right";
+        grid-template-columns: 60% 40%;
+    }
+    .left {
+        grid-area: left;
+    }
+    .right {
+        grid-area: right;
+    }
+    .resumeHead {
+        font-size: 4em;
+    }
+    .summaryHead {
+        padding-top: 10px;
+    }
+    .summary {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .summaryContent {
+        padding-bottom: 15px;
+        font-weight: 300;
+        font-size: 1.25em;
+    }
+    .summary,
+    .work,
+    .education,
+    .volunteer,
+    .skills,
+    .contact,
+    .projects {
+        padding: 5px;
+        padding-right: 10px;
+    }
+    li {
+        font-size: 1.1em;
+    }
+    .work {
+    border-right: none;
+
+        padding-top: 20px;
+    }
+    .education {
+        margin-top: 0;
+    }
+    .educationHead {
+        padding-top: 10px;
+    }
+    .educationListHead {
+        margin-left: 20px;
+    }
+    .educationListContent {
+        margin-left: 10px;
+    }
+    .volunteer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .rightSkills {
+        margin-left: 10px;
+    }
+    .skillsListContent {
+        font-size: 1.25em;
+    }
+    .contact {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-left: 3px solid #C4B19E;
+        font-size: 1.3em;
+    }
+    .resContactImg {
+        width: 40px;
+        padding-bottom: 2px;
+    }
+    .email {
+        padding-top: 30px;
+    }
+    .projects {
+        padding: 12px;
+        padding-left: 15px;
+    }
+    .projectsSub {
+        text-align: center;
+        font-weight: 400;
+        padding-top: 10px;
+        font-size: 1.1em;
+    }
+    .portfolioLink {
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .listHead {
+        font-size: 1.3em;
+    }
+    li {
+        font-size: 1.2em;
+    }
+    .work {
+        padding-top: 20px;
+    }
+    .education {
+        margin-top: 0;
+    }
+    .educationHead {
+        padding-top: 10px;
+    }
+    .educationListHead {
+        margin-left: 20px;
+    }
+    .educationListContent {
+        margin-left: 10px;
+    }
+    .volunteer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .rightSkills {
+        margin-left: 10px;
+    }
+    .skillsListContent {
+        font-size: 1.25em;
+    }
+    .contact {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-left: 3px solid #C4B19E;
+        font-size: 1.3em;
+    }
+    .resContactImg {
+        width: 40px;
+        padding-bottom: 2px;
+    }
+    .email {
+        padding-top: 30px;
+    }
+    .projects {
+        padding: 12px;
+        padding-left: 15px;
+    }
+    .projectsSub {
+        text-align: center;
+        font-weight: 400;
+        padding-top: 10px;
+        font-size: 1.1em;
+    }
+    .portfolioLink {
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (min-width: 924px) {
+    .resumeWrapper {
+        padding: 20px;
+    }
+    .resumeHead {
+        padding: 10px;
+    }
+    .resumeContainer {
+        padding-top: 20px;
+    }
+    .education,
+    .volunteer {
+        padding-right: 30px;
+    }
+    .educationListContent {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 924px) {
+    .resumeWrapper {
+        padding: 40px;
+    }
+    .resumeHead {
+        padding: 10px;
+    }
+    .resumeContainer {
+        padding-top: 20px;
+    }
+    .left {
+        padding-right: 10;
+    }
+    .listHead {
+        font-size: 1.5em;
+    }
+    .summary {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .work {
+        padding-bottom: 30px;
+    }
+    .education {
+        padding-bottom: 20px;
+    }
+    .volunteer {
+        padding-top: 35px;
+    }
+    .educationListContent,
+    li, .projectsSub {
+        font-size: 1.4em;
+    }
+    .contact {
+        font-size: 1.5em;
+    }
+    .skillsListContent {
+        font-size: 1.45em;
+    }
+    .rightColumn {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .rightColumn {
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .rightColumn {
+        margin-left: 80px;
+    }
+}
+
